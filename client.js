@@ -20,3 +20,18 @@ function addObject( size, color, name ){
 } // end addObject
 
 // search function
+function searchInventory( size ){
+    console.log( 'in searchInventory:', size );
+    let matches = [];
+    // loop through the inventory array
+    for( item of inventory ){
+        // if this item matches size
+        if( item.size === size ){
+            console.log( 'match found:', item );
+            // push into matches array
+            matches.push( item );
+        } // end size match
+    } // end for loop
+    // return matches array
+    return matches;
+} // end search function
